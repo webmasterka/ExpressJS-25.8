@@ -1,0 +1,48 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.levels {
+    display: none;
+}
+
+.show {
+    display: block;
+    margin: 0;
+    padding: 0;
+
+}
+
+.board {
+    width: 750px;
+
+}
+
+.input {
+    width: 76px;
+    height: 76px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 35px;
+    color: red;
+}
+
+button {
+    padding: 10px;
+    width: 70px;
+    height: 33px;
+}
+
+button:hover {
+    background: red;
+    color: white;
+    transition: 0.3s;
+}
+
+h4 {
+    color: red;
+    margin-left: 305px;
+    margin-bottom: 0;
+    font-size: 25px;
+}
