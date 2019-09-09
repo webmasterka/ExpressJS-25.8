@@ -37,8 +37,10 @@ class App extends React.Component {
 
     check() {
         let solved = sudoku.solve(this.state.board.join(''))
-        if (solved) window.alert("Rozwiązałeś prawidłowo!")
-        else window.alert("Niestety nie udało się")
+        if (this.state.board !== this.state.initialBoard) {
+            if (solved) window.alert("Rozwiązałeś prawidłowo!")
+            else window.alert("Niestety nie udało się")
+        }
     }
 
     render() {
@@ -53,8 +55,10 @@ class App extends React.Component {
 
                 <div className={style.board}>
                     {this.state.board.map((item, index) => {
-                        if (this.state.initialBoard[index] == ".") return <input className={style.input} key={index} min="0" max="9" type='number' onChange={(e) => { this.updateField(e, index) }} value={item} />
-                        else return <input disabled className={style.input} key={index} type='number' value={item} />
+                        if (this.state.initialBoard[index] == ".") 
+                            return <input className={style.input} key={index} min="0" max="9" type='number' onChange={(e) => { this.updateField(e, index) }} value={item} />
+                        else 
+                            return <input disabled className={style.input} key={index} type='number' value={item} />
                     })}
                 </div>
 
